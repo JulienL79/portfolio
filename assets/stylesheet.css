@@ -206,11 +206,7 @@ nav a.current-link {
     height: 4px;
     border-radius: .5rem;
     background-color: var(--color-text);
-    transition: transform 0.8s ease, background-color .5s ease;
-}
-
-.menu-hamburger:hover .line {
-    background-color: var(--color-link);
+    transition: transform 0.8s ease;
 }
 
 .menu-hamburger .line:nth-child(2) {
