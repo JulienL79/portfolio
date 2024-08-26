@@ -148,9 +148,7 @@ CODE PRINCIPALE
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  
-
-  //affiche la navbar et l'article home
+    //affiche la navbar et l'article home
   const header = document.querySelector("header");
   const home = document.getElementById("home");
   animationOffSet(home, animationOffSet(header));
@@ -159,17 +157,19 @@ document.addEventListener('DOMContentLoaded', function () {
   //pour faire apparaître les sections au fur et à mesure
   window.addEventListener('scroll', checkViewport);
 
-  //affiche les liens une fois cliqué sur le bouton burger
+  //affiche les liens une fois cliqué sur le bouton burger et modifie  l'affichage de l'icone burger
   let isActive = false;
   const navbar = document.querySelector('.nav-link');
-  const menuButton = document.querySelector('.menu-hamburger');
+  const menuButton = document.getElementById('burger-menu');
 
   menuButton.addEventListener("click", () => {
     if (isActive === false) {
       navbar.classList.add("active");
+      menuButton.classList.add("open");
       isActive = true;
     } else {
       navbar.classList.remove("active");
+      menuButton.classList.remove("open");
       isActive = false;
     }
   });
@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
   navbar.addEventListener("click", () => {
     if (isActive === true) {
       navbar.classList.remove("active");
+      menuButton.classList.remove("open");
       isActive = false;
     }
   });

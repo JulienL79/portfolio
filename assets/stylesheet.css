@@ -191,10 +191,42 @@ nav a.current-link {
 }
 
 .menu-hamburger {
-    display: block;
-    width: 4rem;
-    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
     opacity: 0;
+    z-index: 99;
+}
+
+.line {
+    width: 90%;
+    height: 4px;
+    border-radius: .5rem;
+    background-color: var(--color-text);
+    transition: transform 0.8s ease, background-color .5s ease;
+}
+
+.menu-hamburger:hover .line {
+    background-color: var(--color-link);
+}
+
+.menu-hamburger .line:nth-child(2) {
+    transition: all 0.5s ease;
+}
+
+.menu-hamburger.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-hamburger.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburger.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 nav.active {
