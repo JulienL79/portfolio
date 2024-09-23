@@ -85,6 +85,15 @@ body {
 GENERALITIES
 ================================================================================================ */
 
+html,
+body {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body  {
     font-family: "Roboto Mono", monospace;
     font-weight: var(--font-weight-body);
