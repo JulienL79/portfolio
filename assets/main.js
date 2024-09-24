@@ -142,7 +142,7 @@ function clickListener () {
       if (allModal[index]) {
         allModal[nbrModal].style.display = 'flex';
         dialog.classList.add("show");
-        blurBg.classList.add("notHide");
+        blurBg.classList.add("not-hide");
         document.body.classList.add("no-scroll");
       }
     });
