@@ -11,27 +11,28 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link type='text/css' rel='stylesheet' href="assets/stylesheet.css" />
+    <link type='text/css' rel='stylesheet' href="assets/styles.css" />
     <title>Portfolio Julien LOISEAU</title>
 </head>
 
 <body>
     <header>
-            <a href="#" class="logo divElement">
+            <a href="#" class="logo div-element">
                 JL
             </a>
     
             <nav class='nav-link'>
                 <ul>
-                    <li class="divElement"><a href="#" class="current-link">Accueil</a></li>
-                    <li class="divElement"><a href="#about">Qui suis-je?</a></li>
-                    <li class="divElement"><a href="#skill">Compétences</a></li>
-                    <li class="divElement"><a href="#project">Projets</a></li>
-                    <li class="divElement"><a href="#contact">Coordonnées</a></li>
+                    <li class="div-element"><a href="#" class="current-link">Accueil</a></li>
+                    <li class="div-element"><a href="#about">À propos</a></li>
+                    <li class="div-element"><a href="#skill">Compétences</a></li>
+                    <li class="div-element"><a href="#project">Projets</a></li>
+                    <li class="div-element"><a href="#contact">Coordonnées</a></li>
+                    <li class="div-element"><a href="#form">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="menu-hamburger divElement" id="burger-menu">
+            <div class="menu-hamburger div-element" id="burger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -39,115 +40,161 @@
     </header>
 
     <main class="container">
-        <article class="article" id="home"><!--Section Accueil-->
-            <img src="assets/img/imghome.png" alt="Photo Julien Loiseau" class="home-img divElement"/>
+        <section class="section" id="home"><!--Section Accueil-->
+            <img src="assets/img/imghome.png" alt="Photo Julien Loiseau" class="home-img div-element"/>
             <div id="home-content">
-                <h3 class="divElement">Hey! Vous êtes sur le site de</h3>
-                <h1 class="divElement">Julien Loiseau</h1>
-                <h3 class="divElement showJob">Mon métier? <span class="multiple-text"></span><span class="cursor"></span></h3>
+                <h3 class="div-element">Hey! Vous êtes sur le portfolio de</h3>
+                <h1 class="div-element">Julien Loiseau</h1>
+                <h3 class="div-element show-job">Mon métier? <span class="multiple-text"></span><span class="cursor"></span></h3>
                 <div class="text-content">
-                    <p class="divElement"><span class="pBlue">function</span> <span class="pYellow">alternanceResearch</span> <span
-                        class="pOrange">(FullStack.Dev, 3W.Academy)</span> {</p>
-                    <p class="divElement"><span class="pRed">if</span> <span class="pBlue">(your.Interest</span>&lt; 100% <span class="pBlue">)</span> {</p>
-                    <p class="divElement"><span class="pPurple">return</span> <span class="pYellow">contactMe</span> <span class="pOrange">(06,74,96,98,27)</span></p>
-                    <p class="divElement">} <span class="pRed">else</span> {</p>
-                    <p class="divElement"><span class="pPurple">return</span> <span class="pBlue">true</span> <span class="pGreen">// à ma candidature</span></p>
-                    <p class="divElement">} </p>              
-                    <p class="divElement">}</p>
+                    <p class="div-element"><span class="p-blue">function</span> <span class="p-yellow">alternanceResearch</span> <span
+                        class="p-orange">(FullStack.Dev, 3W.Academy)</span> {</p>
+                    <p class="div-element"><span class="p-red">if</span> <span class="p-blue">(your.Interest</span> &lt; 100%<span class="p-blue">)</span> {</p>
+                    <p class="div-element"><span class="p-purple">return</span> <span class="p-yellow">contactMe</span> <span class="p-orange">(06,74,96,98,27)</span></p>
+                    <p class="div-element">} <span class="p-red">else</span> {</p>
+                    <p class="div-element"><span class="p-purple">return</span> <span class="p-blue">true</span> <span class="p-green">// à ma candidature</span></p>
+                    <p class="div-element">} </p>              
+                    <p class="div-element">}</p>
                 </div>
                 
                 <div class="first-link">
-                    <a href="https://www.linkedin.com/in/julien-loiseau-148630174/" target="_blank" class="icon-link divElement"><i
-                        class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/julien_loiseau/" target="_blank" class="icon-link divElement"><i class='bx bxl-instagram'></i></a>
-                    <a href="mailto:loiseau.julien79@gmail.com" target="_blank" class="icon-link divElement"><i class='bx bx-mail-send'></i></a>
+                    <a href="#form" class="btn div-element">Me contacter</a>
 
                     <a href="assets/img/CV_Julien_LOISEAU.pdf" target="_blank" download="CV_Julien_LOISEAU.pdf"
-                    class="btn divElement">Télécharger mon CV</a>
+                    class="btn div-element">Télécharger mon CV</a>
                 </div>    
             </div>
-        </article>
-        <article class='article' id="about"><!--Section A propos de moi-->
-                <h2 class="divElement">Qui suis-je?</h2>
-                <p class="divElement"><span class="pBlue">Ancien comptable </span> 🧾<span class="cursor"></span> et <span
-                        class="pOrange">spécialiste en déminage/explosifs </span>💣<span class="cursor"></span>, je me
-                    dirige désormais vers une carrière de Développeur Web 👨‍💻 !<br>
-                    Je vais prochainement intégrer la <span class="pCyan">3W Academy</span><span class="cursor"></span>
-                    (07/2024) pour une formation de <span class="pYellow">Full-Stack Developer</span>.<span
-                        class="cursor"></span><br>
-                    <br>
-                    Celle-ci s'établira en deux parties:<br>
-                    <br>
-                    - une mise à niveau intense de <span class="pRed">3 mois (école uniquement)</span> pendant lesquels
-                    seront vues les compétences suivantes : <span class="pYellow">HTML, CSS, JS, PHP, SQL puis
-                        Spécialisation React et Node JS</span><br>
-                    <br>
-                    - une seconde partie de <span class="pRed">12 mois en alternance (rythme: 3 sem entreprise | 1 sem
-                        école)</span> qui approfondira mes connaissances.<br>
-                    Je cherche donc une entreprise basée sur le bassin <span class="pGreen">Bordelais, Nantais, ou
+        </section>
+        <section class='section' id="about"><!--Section A propos de moi-->
+                <h2 class="div-element">À propos</h2>
+                <p class="div-element"><span class="p-blue">Ancien comptable </span> 🧾<span class="cursor"></span> et <span
+                    class="p-orange">spécialiste en déminage/explosifs </span>💣<span class="cursor"></span>, je me
+                dirige désormais vers une carrière de Développeur Web 👨‍💻 !</p>
+                <p class="div-element">
+                Je vais prochainement intégrer la <span class="p-cyan">3W Academy</span><span class="cursor"></span>
+                (07/2024) pour une formation de <span class="p-yellow">Full-Stack Developer</span>.<span
+                    class="cursor"></span>
+                </p>
+                <p class="div-element">
+                    Celle-ci s'établira en <span class="p-purple">deux parties</span>:
+                </p>
+                <p class="div-element">
+                    - une mise à niveau intense de <span class="p-red">3 mois (école uniquement)</span> pendant lesquels
+                    seront vues les compétences suivantes : <span class="p-yellow">HTML, CSS, JS, PHP, SQL puis
+                        Spécialisation React et Node JS</span>
+                </p>
+                <p class="div-element">
+                    - une seconde partie de <span class="p-red">12 mois en alternance (rythme: 3 sem entreprise | 1 sem
+                        école)</span> qui approfondira mes connaissances.</p>
+                <p class="div-element">
+                    Je cherche donc une entreprise basée sur le bassin <span class="p-green">Bordelais, Nantais, ou
                         Angevin</span>, qui m'accompagnerait dans cette aventure! 👋
                 </p>
-        </article>
-        <article class='article' id="skill"><!--Section Mes compétences-->
-                <h2 class="divElement">Compétences</h2>
+        </section>
+        <section class='section' id="skill"><!--Section Mes compétences-->
+                <h2 class="div-element">Compétences</h2>
                 <div class="skill-div">
-                    <p class="icon-link skill-icon divElement" data-description="HTML"><i class="fa-brands fa-html5"></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="CSS"><i class="fa-brands fa-css3-alt"></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="Bootstrap"><i class="fa-brands fa-bootstrap"></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="Javascript"><i class='bx bxl-javascript'></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="PHP"><i class='bx bxl-php'></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="Symfony"><i class="fa-brands fa-symfony"></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="React"><i class='bx bxl-react'></i></p>
-                    <p class="icon-link skill-icon divElement" data-description="Node.JS"><i class='bx bxl-nodejs'></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="HTML"><i class="fa-brands fa-html5"></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="CSS"><i class="fa-brands fa-css3-alt"></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="Bootstrap"><i class="fa-brands fa-bootstrap"></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="Javascript"><i class='bx bxl-javascript'></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="PHP"><i class='bx bxl-php'></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="Symfony"><i class="fa-brands fa-symfony"></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="React"><i class='bx bxl-react'></i></p>
+                    <p class="icon-link skill-icon div-element" data-description="Node.JS"><i class='bx bxl-nodejs'></i></p>
                 </div>
-        </article>
-        <article class='article' id="project"><!--Section Portfolio-->
-                <h2 class="divElement">Projets</h2>
+        </section>
+        <section class='section' id="project"><!--Section Projets-->
+                <h2 class="div-element">Projets</h2>
                 <div class="project-div">
-                    <p class="icon-link project-icon divElement" id="work1" data-description="WikiCampers"><i
-                            class="fa-solid fa-car-side"></i></p>
-                    <p class="icon-link project-icon divElement" id="work2"></p>
-                    <p class="icon-link project-icon divElement" id="work3"></p>
-                    <p class="icon-link project-icon divElement" id="work4"></p>
-                    <p class="icon-link project-icon divElement" id="work5"></p>
-                    <p class="icon-link project-icon divElement" id="work6"></p>
+                    <p class="icon-link project-icon div-element" id="work1" data-description="Distorsion">
+                        <i class="fa-solid fa-comments"></i>
+                    </p>
+                    <p class="icon-link project-icon div-element" data-description="WikiCampers" id="work2">
+                        <i class="fa-solid fa-car-side"></i>
+                    </p>
+                    <p class="icon-link project-icon div-element" id="work3"></p>
+                    <p class="icon-link project-icon div-element" id="work4"></p>
+                    <p class="icon-link project-icon div-element" id="work5"></p>
+                    <p class="icon-link project-icon div-element" id="work6"></p>
                 </div>
-                <p class="divElement" id="workInProgress"><span class="multiple-text"></span><span class="cursor"></span></p>
-        </article>
-        <article class='article' id="contact"><!--Section Coordonnée-->
-                <h2 class="divElement">Coordonnées</h2>
+                <p class="div-element" id="work-in-progress"><span class="multiple-text"></span><span class="cursor"></span></p>
+        </section>
+        <section class='section' id="contact"><!--Section Coordonnées-->
+                <h2 class="div-element">Coordonnées</h2>
             <div class="contact-div">
-                <a href="mailto:loiseau.julien79@gmail.com" target="_blank" class="icon-link divElement"><i
+                <a href="mailto:loiseau.julien79@gmail.com" target="_blank" class="icon-link div-element"><i
                             class='bx bx-mail-send'></i></a>
-                <p class="divElement">loiseau.julien79@gmail.com</p>
-                <a href="https://www.linkedin.com/in/julien-loiseau-148630174/" target="_blank" class="icon-link divElement"><i class='bx bxl-linkedin'></i></a>
-                <p class="divElement">LinkedIn</p>
-                <a href="tel:+33674969827" target="_blank" class="icon-link divElement"><i
+                <p class="div-element">loiseau.julien79@gmail.com</p>
+                <a href="https://www.linkedin.com/in/julien-loiseau-148630174/" target="_blank" class="icon-link div-element"><i class='bx bxl-linkedin'></i></a>
+                <p class="div-element">LinkedIn</p>
+                <a href="tel:+33674969827" target="_blank" class="icon-link div-element"><i
                             class='bx bxs-phone'></i></a>
-                <p class="divElement">06 74 96 98 27</p>
-                <a href="https://www.instagram.com/julien_loiseau/" target="_blank" class="icon-link divElement"><i
+                <p class="div-element">06 74 96 98 27</p>
+                <a href="https://www.instagram.com/julien_loiseau/" target="_blank" class="icon-link div-element"><i
                             class='bx bxl-instagram'></i></a>
-                <p class="divElement">Instagram</p>
-                <a href="https://maps.app.goo.gl/fcTPb5MCZQhxwgeU9" target="_blank" class="icon-link divElement"><i
+                <p class="div-element">Instagram</p>
+                <a href="https://maps.app.goo.gl/fcTPb5MCZQhxwgeU9" target="_blank" class="icon-link div-element"><i
                             class='bx bxs-home'></i></a>
-                <p class="divElement">Villedieu-la-Blouère</p>
-                <a href="https://github.com/JulienL79" target="_blank" class="icon-link divElement"><i
+                <p class="div-element">Villedieu-la-Blouère</p>
+                <a href="https://github.com/JulienL79" target="_blank" class="icon-link div-element"><i
                             class='bx bxl-github'></i></a>
-                <p class="divElement">Github</p>
+                <p class="div-element">Github</p>
             </div>
-        </article>
+        </section>
+        <section class='section' id="form"><!--Section Contact-->
+            <h2 class="div-element">Contact</h2>
+            <form action="https://formspree.io/f/mnnakrnp" class="contact-form" method="POST">
+
+                <label for="name" class="div-element">Nom complet<span class="p-orange">*</span></label>
+                <input type="text" name="name" id="name" class="div-element" required>
+
+                <label for="email" class="div-element">Email<span class="p-orange">*</span></label>
+                <input type="email" name="email" id="email" class="div-element" required>
+
+                <label for="company" class="div-element" >Entreprise</label>
+                <input type="text" name="company" id="company" class="div-element">
+
+                <label for="subject" class="div-element">Objet<span class="p-orange">*</span></label>
+                <input name="subject" id="subject" class="div-element" required>
+
+                <label for="content" class="div-element">Message<span class="p-orange">*</span></label>
+                <textarea type="textarea" name="content" id="content" class="div-element" required></textarea>
+
+                <button type="submit" class="btn div-element">Envoyer</button>
+            </form>
+        </section>
         
         <img src="assets/img/topButton.png" alt="Bouton remonter en haut" onclick="scrollToTop()" id="scrollTopBtn" title="Retour en haut de page">
         
         <div id="dialog">
             <img src="assets/img/closeButton.png" alt="Bouton fermer" class="close-button btn"/>
-            <div class="hideDiv">
+            <div class="hide-div">
+                <p class="icon-link project-icon popup-img"><i class="fa-solid fa-comments"></i></p>
+                <h2>Distorsion</h2>
+                <div class="project-description">
+                    <p>
+                        J'ai pu réaliser une <span class="p-blue">messagerie sécurisée</span> en <span class="p-green">PHP</span>.
+                        Chaque utilisateur, après authentification et connexion, a la possibilité de <span class="p-yellow">créer/modifier/supprimer</span> des serveurs, selon les droits qu'il possède. Chaque serveur est composé de salons classés par catégorie sur lesquels les utilisateurs  <span class="p-red">peuvent échanger des messages</span>. Les utilisateurs peuvent également <span class="p-cyan">gérer leurs informations personnelles</span>.
+                    </p>
+                </div>
+                <h3>Technos utilisées:</h3>
+                <div class="techno-dialog">
+                    <p class="icon-link skill-icon" data-description="CSS"><i class="fa-brands fa-css3-alt"></i></i></p>
+                    <p class="icon-link skill-icon" data-description="PHP"><i class='bx bxl-php'></i></p>
+                </div>
+                <a href="https://github.com/JulienL79/Distorsion" target="_blank" class="btn">Lien Github</a>
+            </div>
+            <div class="hide-div">
                 <p class="icon-link project-icon popup-img"><i class="fa-solid fa-car-side"></i></p>
-                <p>
-                    J'ai pu réaliser un <span class="pBlue">site de mise en location de véhicules</span> avec <span class="pGreen">Symfony</span>.
-                    Interactions possibles avec la base de données afin de pouvoir <span class="pYellow">créer/modifier/supprimer</span> des véhicules
-                    , leur ajouter des disponibilités et également <span class="pRed">effectuer une recherche</span> sur les véhicules disponibles.
-                </p>
+                <h2>WikiCampers</h2>
+                <div class="project-description">
+                    <p>
+                        J'ai pu réaliser un <span class="p-blue">site de mise en location de véhicules</span> avec <span class="p-green">Symfony</span>.
+                        Interactions possibles avec la base de données afin de pouvoir <span class="p-yellow">créer/modifier/supprimer</span> des véhicules
+                        , leur ajouter des disponibilités et également <span class="p-red">effectuer une recherche</span> sur les véhicules disponibles.
+                    </p>
+                </div>
                 <h3>Technos utilisées:</h3>
                 <div class="techno-dialog">
                     <p class="icon-link skill-icon" data-description="HTML"><i class="fa-brands fa-html5"></i></p>
@@ -159,7 +206,7 @@
         </div>
     </main>
     <div id="blur-bg"></div>
-    <script src="assets/script.js"></script>
+    <script src="assets/main.js"></script>
 </body>
 
 </html>
