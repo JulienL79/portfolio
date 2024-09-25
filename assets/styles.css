@@ -76,6 +76,7 @@ TOOLS
 
 html {
     font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -106,6 +107,7 @@ body  {
 h1 {
 	font-size: var(--font-size-h1);
     font-weight: var(--font-weight-title);
+    
 }
 
 section.current h1 {
@@ -268,16 +270,8 @@ section.current {
     opacity: 1;
 }
 
-section::before {
-    content: "";
-    display: block;
-    height: 8rem;
-    margin-top: -8rem;
-    visibility: hidden;
-}
-
 section + section {
-    margin-top: 100vh;
+    margin-top: 20vh;
 }
 
 /* HOME ************************************************************************************** */
@@ -428,7 +422,7 @@ section + section {
 
 .contact-div {
     display: grid;
-    grid-template: repeat(6, 1fr) / 30% 70%;
+    grid-template: repeat(4, 1fr) / 30% 70%;
     row-gap: 2rem;
 }
 
@@ -487,6 +481,11 @@ section + section {
 .contact-form textarea {
     height: 8rem;
     resize: none;
+    scrollbar-width: auto;
+}
+
+.contact-form textarea::-webkit-scrollbar {
+    display: block;
 }
 
 .contact-form label {
@@ -505,8 +504,6 @@ section + section {
 #form.current .contact-form textarea {
     animation: slideLeft 1s ease forwards;
 }
-
-
 
 /* =============================================================================================
 VARIOUS
@@ -675,8 +672,13 @@ VARIOUS
 
 #dialog .project-description {
     box-sizing: border-box;
-    max-height: 50px;
+    max-height: 70px;
     overflow-y: auto;
+    scrollbar-width: auto;
+}
+
+#dialog .project-description::-webkit-scrollbar {
+    display: block;
 }
 
 /* OTHER   ========================================================== */
@@ -1009,7 +1011,7 @@ VERSION TABLETTE
 
     /* COORDONNEES **************************************************************************  */
     .contact-div {
-        grid-template: repeat(3, 1fr) / 15% 35% 15% 35%;
+        grid-template: repeat(2, 1fr) / 15% 35% 15% 35%;
     }
 
     .contact-div > p {
@@ -1061,6 +1063,10 @@ VERSION TABLETTE
 
     #dialog h3 {
         font-size: var(--font-size-h3);
+    }
+
+    #dialog .project-description {
+        max-height: 50px;
     }
 
     /* OTHERS *********************************************************************************** */
