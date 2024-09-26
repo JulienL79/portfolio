@@ -4,16 +4,35 @@ VARIABLES
 
 :root {
     --font-size-logo: 3rem;
-    --font-size-h1: 3.2rem;
-    --font-size-h2: 3rem;
-    --font-size-h3: 2rem;
-    --font-size-h2-dialog: 1.6rem;
-    --font-size-h3-dialog: 1.2rem;
-    --font-size-body: 1.2rem;
-    --font-size-small: 1rem;
+    --font-size-nav-sm: 2.4rem;
+    --font-size-nav-md: 1.6rem;
+    --font-size-nav-lg: 2rem;
+    --font-size-h1-sm: 3.2rem;
+    --font-size-h1-lg: 4rem;
+    --font-size-h2-sm: 3rem;
+    --font-size-h2-lg: 3.2rem;
+    --font-size-h3-sm: 2rem;
+    --font-size-h3-lg: 2.4rem;
+    --font-size-h2-sm-dialog: 2rem;
+    --font-size-h3-sm-dialog: 1.4rem;
+    --font-size-text-sm-dialog: 1rem;
+    --font-size-body-sm: 1.2rem;
+    --font-size-body-md: 1.4rem;
+    --font-size-body-lg: 1.6rem;
+    --font-size-input-sm: 1rem;
+    --font-size-icon-xsm: 2.5rem;
+    --font-size-icon-sm: 3rem;
+    --font-size-icon-md: 4rem;
+    --font-size-icon-lg: 5rem;
+    --size-icon-xsm: 5rem;
+    --size-icon-sm: 6rem;
+    --size-icon-md: 8rem;
+    --size-icon-lg: 10rem;
     --font-weight-logo: 800;
+    --font-weight-icon-after: 700;
     --font-weight-title: 600;
     --font-weight-body: 400;
+    --font-weight-other: 500;
     --color-text: #f2f2f2;
     --color-bg: #333333;
     --color-link: #D19A66;
@@ -80,7 +99,7 @@ html {
 }
 
 body {
-    font-size: 1.2rem;
+    font-size: var(--font-size-body-sm);
 }
 
 /* =============================================================================================
@@ -105,7 +124,7 @@ body  {
 }
 
 h1 {
-	font-size: var(--font-size-h1);
+	font-size: var(--font-size-h1-sm);
     font-weight: var(--font-weight-title);
     
 }
@@ -116,7 +135,7 @@ section.current h1 {
 
 h2 {
     margin-bottom: 3rem;
-	font-size: var(--font-size-h2);
+	font-size: var(--font-size-h2-sm);
     font-weight: var(--font-weight-title);
     opacity: 0;
 }
@@ -127,7 +146,7 @@ section.current h3 {
 }
 
 h3 {
-	font-size: var(--font-size-h3);
+	font-size: var(--font-size-h3-sm);
     font-weight: var(--font-weight-title);
 }
 
@@ -185,7 +204,7 @@ nav {
 
 nav > ul {
     margin-top: 10rem;
-    font-size: 2.4rem;
+    font-size: var(--font-size-nav-sm);
     font-weight: var(--font-weight-title);
 }
 
@@ -304,10 +323,10 @@ section + section {
     text-align: center;
 }
 
-#home-content h3:nth-of-type(2) {
-    margin: 1rem 0;
+.show-job {
+    margin: 2rem 0 1rem 0;
     text-align: left;
-    font-size: var(--font-size-h2-dialog);
+    font-size: var(--font-size-nav-md);
 }
 
 .text-content {
@@ -342,7 +361,7 @@ section + section {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #home .multiple-text {
@@ -365,16 +384,14 @@ section + section {
 
 .skill-div {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .icon-link.skill-icon {
     justify-self: center;
     align-self: center;
     margin-bottom: 3rem;
-    font-size: 3rem;
-    width: 6rem;
-    height: 6rem;
 }
 
 #skill.current .icon-link {
@@ -385,22 +402,17 @@ section + section {
 
 .project-div {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 .icon-link.project-icon {
     justify-self: center;
     align-self: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     color: var(--color-bg);
     background-color: var(--color-link);
-    justify-self: center;
+    box-shadow: 0 0 0.62em var(--color-link);
     margin-bottom: 3rem;
-    font-size: 3rem;
-    width: 6rem;
-    height: 6rem;
     cursor: pointer;
 }
 
@@ -409,8 +421,9 @@ section + section {
 }
 
 #work-in-progress {
-    font-size: var(--font-size-h3);
-    font-weight: 500;
+    margin-top: 1.5rem;
+    font-size: var(--font-size-h3-sm);
+    font-weight: var(--font-weight-other);
     opacity: 0;
 }
 
@@ -430,6 +443,12 @@ section + section {
     justify-self: center;
     align-self: center;
     opacity: 0;
+}
+
+#contact .icon-link {
+    font-size: var(--font-size-icon-xsm);
+    height: var(--size-icon-xsm);
+    width: var(--size-icon-xsm);
 }
 
 #contact.current .contact-div p {
@@ -469,7 +488,7 @@ section + section {
     color: var(--color-text);
     border: 1px solid var(--color-text);
     border-radius: 5px;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-input-sm);
 }
 
 .contact-form textarea:focus,
@@ -486,6 +505,7 @@ section + section {
 
 .contact-form textarea::-webkit-scrollbar {
     display: block;
+    width: 12px;
 }
 
 .contact-form label {
@@ -557,7 +577,6 @@ VARIOUS
     top: 5%;
     width: 70%;
     height: auto;
-    font-size: var(--font-size-small);
     background-color: var(--color-bg);
     color: var(--color-text);
     border: 5px solid var(--color-link);
@@ -608,16 +627,17 @@ VARIOUS
 #dialog .icon-link.project-icon {
     margin-top: 1rem;
     margin-bottom: 0;
-    font-size: 4rem;
-    height: 8rem;
-    width: 8rem;
+    box-shadow: none;
+    font-size: var(--font-size-icon-md);
+    height: var(--size-icon-md);
+    width: var(--size-icon-md);
     opacity: 1;
 }
 
 #dialog h2 {
     flex-basis: 100%;
     margin: 1rem 0 2rem 0;
-    font-size: var(--font-size-h2-dialog);
+    font-size: var(--font-size-h2-sm-dialog);
     color: var(--color-link);
     justify-self: center;
     text-align: center;
@@ -627,7 +647,7 @@ VARIOUS
 #dialog h3 {
     flex-basis: 100%;
     margin: 1rem 0;
-    font-size: var(--font-size-h3-dialog);
+    font-size: var(--font-size-h3-sm-dialog);
     color: var(--color-link);
     justify-self: start;
     text-align: left;
@@ -638,13 +658,9 @@ VARIOUS
     opacity: 1;
     position: relative;
     margin-right: 1rem;
-    font-size: 2.5rem;
-    height: 5rem;
-    width: 5rem;
-}
-
-#dialog .icon-link.skill-icon::after {
-    font-size: 1rem;
+    font-size: var(--font-size-icon-xsm);
+    height: var(--size-icon-xsm);
+    width: var(--size-icon-xsm);
 }
 
 #dialog .project-icon:hover {
@@ -688,12 +704,12 @@ VARIOUS
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: var(--size-icon-sm);
+    height: var(--size-icon-sm);
     background: transparent;
     border: 1px solid var(--color-link);
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: var(--font-size-icon-sm);
     color: var(--color-link);
     opacity: 0;
 }
@@ -713,8 +729,8 @@ section.current .icon-link {
     display: block;
     position: absolute;
     top: 110%;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-icon-after);
     font-style: italic;
     background-color: transparent;
     color: var(--color-link);
@@ -736,10 +752,10 @@ section.current .icon-link {
     border: none;
     border-radius: 2.5em;
     box-shadow: 0 0 0.62em var(--color-link);
-    font-size: 1.2rem;
+    font-size: var(--font-size-body-sm);
     color: var(--color-bg);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: var(--font-weight-title);
     opacity: 0;
 }
 
@@ -936,7 +952,7 @@ VERSION TABLETTE
 @media screen and (min-width: 768px) {
 
     body {
-        font-size: 1.4rem;
+        font-size: var(--font-size-body-md);
     }
 
     /* HEADER ==================================================================================  */
@@ -952,7 +968,7 @@ VERSION TABLETTE
     nav > ul {
         display: flex;
         margin-top: 0;
-        font-size: 1.6rem;
+        font-size: var(--font-size-nav-md);
     }
 
     nav > ul li {
@@ -986,36 +1002,36 @@ VERSION TABLETTE
         margin-right: 2rem;
     }
 
-    .text-content {
-        font-size: 1.2rem;
-    }
-
-    #home-content h3:nth-of-type(2){
+    .show-job {
         margin-top: 2rem;
-        font-size: var(--font-size-h3);
+        font-size: var(--font-size-h3-sm);
     }
 
     /* SKILL ****************************************************************************  */
-    .icon-link.skill-icon {
-        width: 8rem;
-        height: 8rem;
-        font-size: 4rem;
+
+    .skill-div {
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     }
 
     /* PROJECT ****************************************************************************  */
-    .icon-link.project-icon {
-        width: 8rem;
-        height: 8rem;
-        font-size: 4rem;
+
+    #work-in-progress {
+        font-size: var(--font-size-h3-lg);
     }
 
     /* COORDONNEES **************************************************************************  */
     .contact-div {
-        grid-template: repeat(2, 1fr) / 15% 35% 15% 35%;
+        grid-template: repeat(2, 1fr) / 20% 30% 20% 30%;
     }
 
     .contact-div > p {
         justify-self: start;
+    }
+
+    #contact .icon-link {
+        font-size: var(--font-size-icon-sm);
+        height: var(--size-icon-sm);
+        width: var(--size-icon-sm);
     }
 
     /* FORM ****************************************************************************  */
@@ -1026,7 +1042,7 @@ VERSION TABLETTE
 
     .contact-form textarea,
     .contact-form input {
-        font-size: var(--font-size-body);
+        font-size: var(--font-size-body-sm);
     }
 
     /* VARIOUS ==================================================================================  */
@@ -1042,43 +1058,51 @@ VERSION TABLETTE
     }
 
     #dialog .icon-link.project-icon {
-        font-size: 5rem;
-        height: 10rem;
-        width: 10rem;
+        font-size: var(--font-size-icon-lg);
+        height: var(--size-icon-lg);
+        width: var(--size-icon-lg);
     }
 
     #dialog .icon-link.skill-icon {
-        width: 6rem;
-        height: 6rem;
-        font-size: 3rem;
+        width: var(--size-icon-sm);
+        height: var(--size-icon-sm);
+        font-size: var(--font-size-icon-sm);
     }
 
     #dialog .icon-link.skill-icon::after {
-        font-size: 1.2rem;
+        font-size: var(--font-size-body-md);
     }
 
     #dialog h2 {
-        font-size: var(--font-size-h2);
+        font-size: var(--font-size-h2-sm);
     }
 
     #dialog h3 {
-        font-size: var(--font-size-h3);
+        font-size: var(--font-size-h3-sm);
     }
 
     #dialog .project-description {
-        max-height: 50px;
+        max-height: 80px;
     }
 
     /* OTHERS *********************************************************************************** */
 
     .icon-link {
-        width: 5rem;
-        height: 5rem;
-        font-size: 2.4rem;
+        width: var(--size-icon-md);
+        height: var(--size-icon-md);
+        font-size: var(--font-size-icon-md);
+    }
+
+    .icon-link::after {
+        font-size: var(--font-size-nav-md);
     }
 
     .btn {
-        font-size: 1.4rem;
+        font-size: var(--font-size-body-md);
+    }
+
+    #scrollTopBtn {
+        width: 50px;
     }
 }
 
@@ -1088,10 +1112,42 @@ VERSION DESKTOP
 
 @media screen and (min-width: 1024px) {
 
+    body {
+        font-size: var(--font-size-body-lg);
+    }
+
+    h1 {
+        font-size: var(--font-size-h1-lg);
+    }
+
+    h2 {
+        font-size: var(--font-size-h2-lg);
+    }
+
+    h3 {
+        font-size: var(--font-size-h3-lg);
+    }
+
+    /* HEADER ==========================================================================  */
+
+    header .logo {
+        font-size: 4rem;
+    }
+
+    nav > ul {
+        font-size: 2rem;
+    }
+
+    /* MAIN ==========================================================================  */
+
     /* HOME ****************************************************************************  */
 
-    #home .text-content {
-        font-size: 1.4rem;
+    #home-content {
+        padding: 0 5rem;
+    }
+
+    .show-job {
+        font-size: var(--font-size-h3-lg);
     }
 
     /* SKILL ****************************************************************************  */
@@ -1100,29 +1156,56 @@ VERSION DESKTOP
         grid-template: repeat(2, 1fr) / repeat(4, 1fr);
     }
 
+    /* COORDONNEES **************************************************************************  */
+    .contact-div {
+        grid-template: repeat(2, 1fr) / 25% 25% 25% 25%;
+    }
+
+    #contact .icon-link {
+        font-size: var(--font-size-icon-md);
+        height: var(--size-icon-md);
+        width: var(--size-icon-md);
+    }
+
     /* FORM ****************************************************************************  */
 
     .contact-form {
         width: 70%;
     }
 
+    .contact-form input,
+    .contact-form textarea {
+        font-size: var(--font-size-body-lg);
+    }
+
     /* VARIOUS ****************************************************************************  */
+
+    .icon-link {
+        width: var(--size-icon-lg);
+        height: var(--size-icon-lg);
+        font-size: var(--font-size-icon-lg);
+    }
 
     .icon-link::after {
         opacity: 0;
+        font-size: var(--font-size-nav-lg);
     }
 
     #dialog .icon-link.skill-icon {
-        width: 8rem;
-        height: 8rem;
-        font-size: 4rem;
+        width: var(--size-icon-md);
+        height: var(--size-icon-md);
+        font-size: var(--font-size-icon-md);
     }
 
     #dialog .icon-link.skill-icon::after {
-        font-size: 1.4rem;
+        font-size: var(--font-size-body-lg);
     }
 
     #dialog h2 {
-        font-size: var(--font-size-h2);
+        font-size: var(--font-size-h2-sm);
+    }
+
+    .btn {
+        font-size: var(--font-size-body-lg);
     }
 }
