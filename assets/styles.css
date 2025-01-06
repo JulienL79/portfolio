@@ -679,10 +679,17 @@ VARIOUS
     align-items: center;
 }
 
-#dialog .btn {
+#dialog .btn.right {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    opacity: 1;
+}
+
+#dialog .btn.left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
     opacity: 1;
 }
 
